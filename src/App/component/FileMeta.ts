@@ -120,7 +120,6 @@ export class FileMeta implements IFileMeta{
   // };
 
   resizeImageToMaxSize = (file: File, maxSizeBytes: number): Promise<File> => {
-
     return new Promise((resolve, reject) => {
       const img = new Image();
       const url = URL.createObjectURL(file);
@@ -215,65 +214,6 @@ export class FileMeta implements IFileMeta{
     });
   };
 
-  // resizeImage (file: File, maxSizeBytes: number): Promise<File> {
-  //   return new Promise((resolve, reject) => {
-  //     const img = new Image();
-  //     const url = URL.createObjectURL(file);
-  //
-  //     img.onload = () => {
-  //       let canvas = document.createElement('canvas');
-  //       let ctx = canvas.getContext('2d');
-  //
-  //       const originalWidth = img.width;
-  //       const originalHeight = img.height;
-  //       let width = originalWidth;
-  //       let height = originalHeight;
-  //       let quality = 0.9; // Start with high quality for JPEG format
-  //
-  //       const scaleFactor = 0.9; // Scaling factor to gradually reduce size
-  //
-  //       const resizeAndCheckSize = () => {
-  //         canvas.width = width;
-  //         canvas.height = height;
-  //
-  //         ctx?.clearRect(0, 0, canvas.width, canvas.height);
-  //         ctx?.drawImage(img, 0, 0, width, height);
-  //
-  //         canvas.toBlob((blob) => {
-  //           if (!blob) {
-  //             reject(new Error('Resizing failed'));
-  //             return;
-  //           }
-  //
-  //           // If the file size is below the maximum size, return it
-  //           if (blob.size <= maxSizeBytes || quality <= 0.1) {
-  //             const resizedFile = new File([blob], file.name, { type: file.type });
-  //             resolve(resizedFile);
-  //           } else {
-  //             // Reduce width, height and quality, and try again
-  //             width = width * scaleFactor;
-  //             height = height * scaleFactor;
-  //             quality = quality * scaleFactor; // reduce quality gradually if using JPEG
-  //
-  //             // Retry resizing with new dimensions and quality
-  //             resizeAndCheckSize();
-  //           }
-  //         }, file.type, quality);
-  //       };
-  //
-  //       resizeAndCheckSize();
-  //     };
-  //
-  //     img.onerror = (err) => {
-  //       reject(err);
-  //     };
-  //
-  //     img.src = url;
-  //   });
-  // };
-  /**
-   *
-   */
   getDataURL = (): Promise<string> =>
     new Promise((resolve, reject) => {
       if (this.file) {

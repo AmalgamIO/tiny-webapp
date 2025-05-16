@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+body {
+  @apply bg-gradient-to-b from-black via-green-900 to-green-500 to-yellow-300 to-white;
+  min-height: 100vh;
+  margin: 0;
+}
+*/
 
 body {
   min-height: 100vh;
