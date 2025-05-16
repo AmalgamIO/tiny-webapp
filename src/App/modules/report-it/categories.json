@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Power",
+    "checked": false
+  },
+  {"id": "1-1", "name": "Downed line", "checked": false},
+  {"id": "1-2", "name": "Junction box", "checked": false},
+  {
+    "id": "2",
+    "name": "Road",
+    "checked": false
+  },
+  {"id": "2-1", "name": "Tree in Road", "checked": false},
+  {"id": "2-2", "name": "Sink hole", "checked": false},
+  {
+    "id": "3",
+    "name": "Water",
+    "checked": false
+  },
+  {"id": "3-1", "name": "Pipe Burst", "checked": false},
+  {"id": "3-2", "name": "Open Hydrant", "checked": false}
+]

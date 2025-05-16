@@ -1,46 +1,86 @@
-# Getting Started with Create React App
+# React based webapp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## To recreate froms scratch
 
-## Available Scripts
+#### Dependencies
 
-In the project directory, you can run:
+`npm install -S autoprefixer axios copy-webpack-plugin exif-js piexif-ts postcss ramda react react-dom react-images-uploading react-router react-router-dom source-map-support typescript-optional`
 
-### `npm start`
+npm install -S typescript-optional
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### DevDependencies
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`npm install -D @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript @types/bootstrap @types/jest @types/react @types/react-dom babel-loader css-loader eslint file-loader html-webpack-plugin jest mini-css-extract-plugin postcss-loader sass sass-loader string-replace-loader style-loader stylelint stylelint-config-standard-scss stylelint-config-tailwindcss tailwindcss @tailwindcss/postcss ts-jest ts-loader typescript url-loader webpack webpack-cli webpack-dev-server`
 
-### `npm test`
+npm install -D @tailwindcss/postcss
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `npm install -D @tailwindcss/postcss` and update your PostCSS configuration.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### OS/Special Files ###
+.DS_Store
+.DS_Store?
+*.swp
+*.swo
+*~
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
 
-### `npm run eject`
+### Build/Dependency Artifacts ###
+/target/
+**/target/
+**/build/
+**/out/
+**/dist/
+**/.gradle/
+**/.mvn/
+**/.npm/
+**/.terraform/
+**/.serverless/
+**/.aws-sam/
+**/cdk.out/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### IDE/Editor ###
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Node ###
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-error.log
+.yarn-integrity
+.pnp.js
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Logs/Cache ###
+*.log
+*.log*
+logs/
+**/logs/
+.npm
+.cache/
+.parcel-cache
+.nyc_output/
+coverage/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Environment ###
+.env
+.env*.local
+.env.development.local
+.env.production.local
+.secrets
+.terraform.tfstate*
+terraform.tfstate*
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Negations (Keep these files) ###
+!gradle/wrapper/gradle-wrapper.jar
+!.mvn/wrapper/maven-wrapper.jar
+!assets/

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #ff5533;
+  background-image: linear-gradient(
+    to bottom,
+    #000000,                /* black */
+    #1a2e1a,                /* dark green */
+    #2e8b57,                /* green */
+    #ffd700,                /* gold */
+    #eee8aa                 /* palegoldenrod */
+  );
+}
+
+#mainContent {
+  min-height: 90vh;
+  padding: 1rem;
+  background-color: rgba(250, 250, 250, 0.1);
+  backdrop-filter: blur(5px);
+}
