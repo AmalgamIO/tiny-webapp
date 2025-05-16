@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const OUTPUT_DIR = 'dist';
+const OUTPUT_DIR = 'build';
 const HTML_TEMPLATE = path.resolve(__dirname, './public/index.xhtml');
 
 module.exports = {
@@ -91,7 +91,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, 'public/cfg'), // Copy config files
-          to: path.resolve(__dirname, 'dist/cfg'),
+          to: path.resolve(__dirname, 'build/cfg'),
           noErrorOnMissing: true,
         },
       ],
@@ -103,7 +103,7 @@ module.exports = {
     historyApiFallback: true,
     static: [
       {
-        directory: path.join(__dirname, 'dist'), // Serve generated files
+        directory: path.join(__dirname, 'build'), // Serve generated files
       },
       {
         directory: path.join(__dirname, 'public'), // Serve static assets

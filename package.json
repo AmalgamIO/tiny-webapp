@@ -1,14 +1,14 @@
 {
   "name": "tiny-webapp",
   "version": "1.0.0",
-  "main": "./dist/bundle.js",
+  "main": "./build/bundle.js",
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack serve --hot --mode development",
-    "clean": "rm -rf dist/* 2>/dev/null",
-    "reset": "rm -rf dist/* node_modules package-lock.json",
+    "clean": "rm -rf build/* 2>/dev/null",
+    "reset": "rm -rf build/* node_modules package-lock.json",
     "watch": "webpack --watch --mode development",
-    "push": "scripts/push_glob.sh dist report-it-dev1",
+    "push": "scripts/push_glob.sh build report-it-dev1",
     "update": "npm run build && npm run push",
     "test": "jest"
   },
